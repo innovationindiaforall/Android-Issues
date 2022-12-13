@@ -39,4 +39,4 @@ Path: AndroidStudio-File-Settings-Build,Execution,Deployment-BuildTools-Gradle-w
 added android.useAndroidX=true in gradle.properties
 --------------------------------------------------------------------
 
-https://developer.android.com/guide/navigation/navigation-deep-link
+Thanks to Android Developer Site for Study: https://developer.android.com/guide/navigation/navigation-deep-link
