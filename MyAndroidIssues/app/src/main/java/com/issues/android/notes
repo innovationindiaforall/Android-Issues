@@ -1,0 +1,33 @@
+User will go AboutPhone --> Build number -- Click 5 to 6 times and enter your PIN and unlock Developer Mode
+under this path: Menu --> System --> Developer options. menu path may vary depending upon android mobile model and os.
+--------------------------------------------------------------------
+Detect Developer Mode and USB Debug Mode and Wireless Debug Mode ON Programmatically
+--------------------------------------------------------------------
+Requirement:
+while login, App want to show security alert thread to user, If Developer Mode is ON status.
+----------------------------------------------------------------------------------------------------
+Solution:
+----------------------------------------------------------------------------------------------------
+also, we can able to detect USB DEBUGGING MODE using below code format:
+ex:
+val adb: Int = Settings.Secure.getInt(this.contentResolver, Settings.Global.ADB_ENABLED, 0)
+if (adb == 1)
+    Toast.makeText(this, "USB Debug Mode:ENABLED", Toast.LENGTH_LONG).show()
+else
+    Toast.makeText(this, "USB Debug Mode:DISABLED", Toast.LENGTH_LONG).show()
+----------------------------------------------------------------------------------------------------
+also, we can able to detect WIRELESS DEBUGGING MODE
+ex:
+private fun isWifiAdbEnabled(): Boolean {
+return Settings.Global.getInt(this.contentResolver, "adb_wifi_enabled", 0) != 0
+}
+----------------------------------------------------------------------------------------------------
+Env:
+Development Language: Kotlin
+IDE: Android Studio(BumbleBee) with build Gradle 7.1.0 version and JDK/JRE Java11 enabled in below path
+Path: AndroidStudio-File-Settings-Build,Execution,Deployment-BuildTools-Gradle-we have to select 11 version Jre file from Program Files under c folder.
+added android.useAndroidX=true in gradle.properties
+--------------------------------------------------------------------
+https://developer.android.com/guide/navigation/navigation-deep-link
+https://github.com/innovationindiaforall/Android-Issues
+----------------------------------------------------------------------------------------------------
